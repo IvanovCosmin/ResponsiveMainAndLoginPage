@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<!--
+Copyright for the template used down there 
+
+Copyright (c) 2016 by Eric (http://codepen.io/ehermanson/pen/KwKWEv)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>Sign-Up/Login Form</title>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up for Free</h1>
+          
+          <form action="/signup" method="post">
+          
+            <div class="field-wrap">
+              <label>
+                Username<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password" required autocomplete="off" name="pass1" id="pass1" onkeyup="checkPass(); return false;"/>
+          </div>
+
+          <div class="field-wrap" >
+            <label>
+              Repeat The Password<span class="req">*</span>
+            </label>
+            <input type="password" required autocomplete="off" name="pass2" id="pass2" onkeyup="checkPass(); return false;"/>
+          </div>
+          
+          <button type="submit" class="button button-block"/>Get Started</button>
+
+<div class="field-wrap">
+<div class="entry-social ">
+<div class="fb">
+<a href="Your_Facebok_Page" target="_blank">Facebook</a>
+</div>
+
+<div class="gplus">
+<a href="Your_Googleplus_Follow" target="_blank">Google+</a>
+</div>
+</div>
+</div>
+          
+          
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="/login" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="/iamforgettingthings">Forgot Password?</a></p>
+          
+          <button class="button button-block"/>Log In</button>
+<div class="field-wrap">
+<div class="entry-social ">
+<div class="fb">
+<a href="Your_Facebok_Page" target="_blank">Facebook</a>
+</div>
+
+<div class="gplus">
+<a href="Your_Googleplus_Follow" target="_blank">Google+</a>
+</div>
+</div>
+</div>
+          
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+    <script src='js/jquery.js'></script>
+
+        <script src="js/index.js"></script>
+
+<script>
+function checkPass()
+{
+    var pass1 = document.getElementById('pass1');
+    var pass2 = document.getElementById('pass2');
+    var colour = null;
+    var goodColor = "#66cc66";
+    var badColor = "#DF013A";
+    var pas = document.getElementById('pas');
+
+    if(pass2.value == "" || pass2.value == null) {
+      pass2.style.backgroundColor = colour;
+    }
+
+    else {
+    
+    if(pass1.value == pass2.value){
+        pass2.style.backgroundColor = goodColor;
+    }
+    else
+    {
+        pass2.style.backgroundColor = badColor;
+    }
+  }
+}  
+</script>
+    
+    
+    
+  </body>
+</html>
